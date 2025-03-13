@@ -61,7 +61,6 @@ main {
 }
 
 img {
-    /* max-width: 536px; */
     width: 100%;
 }
 
@@ -84,12 +83,6 @@ h1 {
 h2 {
     color: var(--brown);
     font-size: var(--font-h2);
-}
-
-h3 {
-    color: var(--rose-800);
-    font-size: var(--font-h3);
-
 }
 
 @media (max-width: 767px) {
@@ -185,6 +178,15 @@ strong {
     padding: 24px;
     border-radius: 10px;
     gap: var(--gap-1);
+}
+
+.preparation-title {
+    color: var(--rose-800);
+    font-size: var(--font-h3);
+}
+
+.preparation-list::marker {
+    color: var(--rose-800);
 }
 
 .table-row {
