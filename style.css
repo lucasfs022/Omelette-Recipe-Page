@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+/* ---> Basic Reset <--- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --white: #fff;
+    --brown: #854632;
+    --rose-800: #7b284f;
+    --rose-50: #fff5fa;
+    --stone-100: #f3e6d8;
+    --stone-150: #e4ded8;
+    --stone-600: #5f574e;
+    --stone-900: #302d2c;
+
+    /* typography */
+    --font-h1-desktop: 40px;
+    --font-h1-mobile: 36px;
+    --font-h2: 28px;
+    --font-h3: 20px;
+    --font-text: 16px;
+    --font-family-title: "Young Serif", serif;
+    --font-family-text: "Outfit", sans-serif;
+    --typography-lh: 150%;
+
+    /* gaps */
+    --gap-1: 1rem;
+    --gap-2: 1.5rem;
+    --gap-3: 2rem;
+}
+
+/* ---> General Styles <--- */
+body,
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    flex-direction: column;
+    background-color: var(--stone-100);
+    line-height: var(--typography-lh);
+    font-family: var(--font-family-text);
+    padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 0px;
+    }
+}
+
+main {
+   flex-direction: column;
+}
+
+img {
+    /* max-width: 536px; */
+    width: 100%;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--rose-800);
+}
+
+h1, h2 {
+    font-family: var(--font-family-title);
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--stone-900);
+    font-size: var(--font-h1-desktop);
+}
+
+h2 {
+    color: var(--brown);
+    font-size: var(--font-h2);
+}
+
+h3 {
+    color: var(--rose-800);
+    font-size: var(--font-h3);
+
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: var(--font-h1-mobile);
+        line-height: 120%;
+    }
+}
+
+p,
+li {
+    font-size: var(--font-text);
+    color: var(--stone-600);
+}
+
+li {
+    margin-left: 24px;
+    text-decoration: none;
+    line-height: 180%;
+}
+
+span {
+    font-weight: 700;
+    margin-left: 14px;
+}
+
+li::marker {
+    color: var(--brown);
+    font-weight: 800;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--stone-150);
+}
+
+strong {
+    color: var(--brown);
+}
+
+/* ---> Omelette Recipe Styles <--- */
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);;
+    max-width: 720px;
+    padding: 40px;
+    border-radius: 20px;
+    gap: var(--gap-3);
+}
+
+.recipe-container img {
+    border-radius: 12px;
+}
+
+.mobile-img {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .recipe-container {
+        padding: 32px;
+        border-radius: 0px;
+        max-width: 100%;
+    }
+
+    .recipe-container img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+    }
+}
+
+.title,
+.preparation,
+.ingredients,
+.instructions,
+.nutrition {
+    display: grid;
+}
+
+.title,
+.ingredients,
+.instructions,
+.nutrition {
+    gap: var(--gap-2);
+}
+
+.preparation {
+    background-color: var(--rose-50);
+    padding: 24px;
+    border-radius: 10px;
+    gap: var(--gap-1);
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8px 32px;
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.table-row:last-child {
+    border: none;
+}
+
+.table-row p:last-of-type {
+    font-weight: 800;
+    color: var(--brown);
+}
+
+.attribution {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .attribution {
+        padding: 20px;
+    }
+}
