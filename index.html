@@ -10,9 +10,14 @@
 </head>
 <body>
   <main>
-    <img class="mobile-img" src="./assets/images/image-omelette.jpeg" alt="Omelette Dish">
+    <figure>
+      <img class="mobile-img" src="./assets/images/image-omelette.jpeg" alt="Omelette Dish">
+    </figure>
+    
     <article class="recipe-container">
-      <img src="./assets/images/image-omelette.jpeg" alt="Omelette Dish">
+      <figure>          
+        <img src="./assets/images/image-omelette.jpeg" alt="Omelette Dish">
+      </figure>
 
       <header class="title">
         <h1>Simple Omelette Recipe</h1>
@@ -23,7 +28,7 @@
       </header>
 
       <section class="preparation">
-        <span class="preparation-title">Preparation time</span>
+        <h3 class="preparation-title">Preparation time</h3>
         <ul>
           <li class="preparation-list"><span class="bold-text">Total:</span> Approximately 10 minutes</li>
           <li class="preparation-list"><span class="bold-text">Preparation:</span> 5 minutes</li>
@@ -78,27 +83,33 @@
         <h2>Nutrition</h2>
         <p>The table below shows nutritional values per serving without the additional fillings.</p>
 
-        <div class="nutrition-table">
-          <div class="table-row">
-            <p>Calories</p>
-            <p>277kcal</p>
-          </div>
+        <table class="nutrition-table">
+          <tbody>
+            <tr>
+              <th scope="row">Calories</th>
+              <td>277kcal</td>
+            </tr>
 
-          <div class="table-row">
-            <p>Carbs</p>
-            <p>0g</p>
-          </div>
+            <tr>
+              <th scope="row">Carbs</th>
+              <td>0g</td>
+            </tr>
 
-          <div class="table-row">
-            <p>Protein</p>
-            <p>20g</p>
-          </div>
+            <tr>
+              <th scope="row">Protein</th>
+              <td>20g</td>
+            </tr>
 
-          <div class="table-row">
-            <p>Fat</p>
-            <p>22g</p>
-          </div>
-        </div>
+            <tr>
+              <th scope="row">Fat</th>
+              <td>22g</td>
+            </tr>
+          </tbody>
+        </table>        
+<style>
+  
+</style>
+
 
       </section>
 

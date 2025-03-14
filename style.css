@@ -39,7 +39,6 @@ body,
 main {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 body {
@@ -104,7 +103,7 @@ li {
     line-height: 180%;
 }
 
-span {
+h3 {
     font-weight: 700;
     margin-left: 14px;
 }
@@ -119,8 +118,8 @@ hr {
     border-top: 1px solid var(--stone-150);
 }
 
-strong {
-    color: var(--brown);
+span {
+    margin-left: 14px;
 }
 
 /* ---> Omelette Recipe Styles <--- */
@@ -150,6 +149,11 @@ strong {
     }
 
     .recipe-container img {
+        border-radius: 0px;
+        width: 100%;
+    }
+
+    .recipe-container img {
         display: none;
     }
 
@@ -163,7 +167,8 @@ strong {
 .ingredients,
 .instructions,
 .nutrition {
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 .title,
@@ -171,6 +176,10 @@ strong {
 .instructions,
 .nutrition {
     gap: var(--gap-2);
+}
+
+.bold-text {
+    font-weight: 700;
 }
 
 .preparation {
@@ -189,30 +198,41 @@ strong {
     color: var(--rose-800);
 }
 
-.table-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 8px 32px;
-    border-bottom: 1px solid var(--stone-150);
+.nutrition-table {
+    border-collapse: collapse; /* faz a borda aparecer na tabela */
+    text-align: left;
+  }
+
+.nutrition-table th {
+    padding-left: 32px;
+    max-width: 70px;
+    font-weight: normal;
+    color: var(--stone-600);
 }
 
-.table-row:last-child {
-    border: none;
-}
-
-.table-row p:last-of-type {
+.nutrition-table td {
+    padding: 8px;
+    text-align: left;
     font-weight: 800;
     color: var(--brown);
 }
 
+.nutrition-table tr {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition-table tr:last-child {
+    border-bottom: none;
+}
+
 .attribution {
-    padding-top: 40px;
+    padding-top: 80px;
     padding-bottom: 10px;
     text-align: center;
 }
 
 @media (max-width: 767px) {
     .attribution {
-        padding: 20px;
+        padding: 40px 20px 20px;
     }
 }
